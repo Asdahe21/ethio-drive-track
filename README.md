@@ -18,19 +18,33 @@ Ethio-Drive-Track/
 │ ├── index.html
 
 │ ├── favicon.ico
-│ └── manifest.json
-├── src/
-│ ├── components/
-│ │ ├── Navbar.js
-│ │ └── SearchBar.js
-│ ├── pages/
-│ │ ├── Home.js
-│ │ ├── About.js
-│ │ ├── Feature.js
-│ │ ├── Login.js
-│ │ └── Register.js
-│ ├── index.js
-│ └── index.css
-├── package.json
-└── README.md
 
+│ └── manifest.json
+
+├── src/
+
+│ ├── components/
+
+│ │ ├── Navbar.js
+
+│ │ └── SearchBar.js
+
+│ ├── pages/
+
+│ │ ├── Home.js
+
+│ │ ├── About.js
+
+│ │ ├── Feature.js
+
+│ │ ├── Login.js
+
+│ │ └── Register.js
+
+│ ├── index.js
+
+│ └── index.css
+
+├── package.json
+
+└── README.md
