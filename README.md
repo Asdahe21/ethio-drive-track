@@ -11,4 +11,23 @@ Ethio Drive Track is a web application designed to provide users with a simple, 
 - **Responsive Design**: Works on both desktop and mobile devices.
 
 ## Project Structure
+Ethio-Drive-Track/
+├── public/
+│ ├── index.html
+│ ├── favicon.ico
+│ └── manifest.json
+├── src/
+│ ├── components/
+│ │ ├── Navbar.js
+│ │ └── SearchBar.js
+│ ├── pages/
+│ │ ├── Home.js
+│ │ ├── About.js
+│ │ ├── Feature.js
+│ │ ├── Login.js
+│ │ └── Register.js
+│ ├── index.js
+│ └── index.css
+├── package.json
+└── README.md
 
