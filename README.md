@@ -12,8 +12,11 @@ Ethio Drive Track is a web application designed to provide users with a simple, 
 
 ## Project Structure
 Ethio-Drive-Track/
-├── public/.
+
+├── public/
+
 │ ├── index.html
+
 │ ├── favicon.ico
 │ └── manifest.json
 ├── src/
