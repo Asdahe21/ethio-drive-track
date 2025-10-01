@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all robots
 User-agent: *
 Disallow:
+
+# Sitemap
+Sitemap: https://Asdahe21.github.io/Ethio-Drive-Track/sitemap.xml
