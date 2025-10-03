@@ -1,81 +1,70 @@
-/* style.css */
-
-/* Navbar */
-nav {
-  background: #222;
-  padding: 15px 30px;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav a {
-  margin: 0 10px;
-  color: white;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #f0a500;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: white;
+.page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 150vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  color: white;
 }
-
-/* Forms (Login & Register) */
-input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.h1{
-    text-align: center;
-}
-/* Hero section on Home */
-.hero {
+.page.home-page {
+  background: url('../assets/bg.png') no-repeat center center/cover; 
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  padding-top: 70px; 
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 60px 20px;
 }
 
-.hero button {
-  background: #007bff;
+.page.home-page .content {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.btn {
   border-radius: 5px;
   border: none;
   color: white;
   padding: 12px 24px;
   cursor: pointer;
+  margin: 10px 0;
+}
+.search-btn {
+  background: #28a745;
+}
+.search-btn:hover {
+  background: #113419;
 }
 
-.hero button:hover {
-  background: #0056b3;
+/* Inputs */
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-/* Footer Styling */
-footer {
-  background-color: #111; /* dark footer */
-  color: #eee;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer a {
-  color: #f0c040; /* golden highlight */
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+input:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-footer a:hover {
-  color: #fff;
+/* Feature Section */
+.feature-section {
+  margin-top: 10px;
 }

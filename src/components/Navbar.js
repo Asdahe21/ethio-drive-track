@@ -7,7 +7,6 @@ const Navbar = () => {
       <div>
         <Link style={styles.link} to="/">Home</Link>
         <Link style={styles.link} to="/about">About</Link>
-        <Link style={styles.link} to="/feature">Feature</Link>
         <Link style={styles.link} to="/login">Login</Link>
         <Link style={styles.link} to="/register">Register</Link>
       </div>

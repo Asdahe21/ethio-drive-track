@@ -1,27 +1,60 @@
+import React, { useState } from "react";
+import bgImage from "../assets/bg.png";
 const Login = () => {
   return (
     <div style={styles.container}>
+      <div style={styles.formBox}>
       <h1>Login</h1>
       <input style={styles.input} type="email" placeholder="Email" />
       <input style={styles.input} type="password" placeholder="Password" />
       <button style={styles.button}>Login</button>
-      <p>Don't have an account? <a href="/register">Register</a></p>
+      <p>
+        Don't have an account? <a href="/register">Register</a>
+      </p>
+      </div>
     </div>
   );
 };
 
+
 const styles = {
-  container: { textAlign: "center", marginTop: "50px" },
-  input: { display: "block", margin: "10px auto", padding: "10px", width: "250px" },
-  button: {
-    padding: "10px 20px",
-    marginTop: "10px",
-    background: "#28A745",
+  container: {
+    display:"flex",
+    justifyContent: "center", // horizontally center
+    alignItems: "center",     // vertically center
+    height: "100vh", 
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    color: "white", 
+  },
+    formBox: {
+    background: "rgba(0, 0, 0, 0.6)", 
+    padding: "40px",
+    borderRadius: "10px",
+    textAlign: "center",
     color: "white",
+    width: "320px",
+  },
+  input: {
+    display: "block",
+    margin: "50px auto",
+    padding: "16px",
+    width: "300px",
+     borderRadius: "5px",
+    border: "none",
+  },
+  button: {
+    padding: "15px 25px",
+    marginTop: "30px",
+    background: "#1d54b5ff",
+     color: "white",
     border: "none",
     borderRadius: "5px",
-    cursor: "pointer"
-  }
+    cursor: "pointer",
+    width: "100%",
+  },
 };
 
 export default Login;
