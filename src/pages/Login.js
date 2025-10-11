@@ -30,12 +30,12 @@ const styles = {
     color: "white", 
   },
     formBox: {
-    background: "rgba(0, 0, 0, 0.6)", 
+    background: "rgba(47, 50, 83, 0.6)", 
     padding: "40px",
-    borderRadius: "10px",
+    borderRadius: "20px",
     textAlign: "center",
     color: "white",
-    width: "320px",
+    width: "350px",
   },
   input: {
     display: "block",
@@ -46,7 +46,7 @@ const styles = {
     border: "none",
   },
   button: {
-    padding: "15px 25px",
+    padding: "15px 20px",
     marginTop: "30px",
     background: "#1d54b5ff",
      color: "white",

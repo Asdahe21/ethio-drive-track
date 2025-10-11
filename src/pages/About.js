@@ -106,7 +106,7 @@ const styles = {
   overlay: {
     backgroundColor: "rgba(61, 55, 102, 0.6)", 
     minHeight: "100vh",
-    padding: "40px",
+    padding: "10px",
   },
 };
 

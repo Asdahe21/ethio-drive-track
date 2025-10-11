@@ -47,24 +47,24 @@ html, body {
   background: #28a745;
 }
 .search-btn:hover {
-  background: #113419;
+  background: #0f1b61;
 }
 
 /* Inputs */
 input {
   display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 250px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 350px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #335e97;
 }
 
 /* Feature Section */
 .feature-section {
-  margin-top: 10px;
+  margin-top: 90px;
 }

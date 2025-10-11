@@ -8,7 +8,6 @@ const Navbar = () => {
         <Link style={styles.link} to="/">Home</Link>
         <Link style={styles.link} to="/about">About</Link>
         <Link style={styles.link} to="/login">Login</Link>
-        <Link style={styles.link} to="/register">Register</Link>
       </div>
     </nav>
   );
@@ -25,7 +24,7 @@ const styles = {
   },
   logo: { margin: 0 },
   link: {
-    margin: "0 10px",
+    margin: "0 30px",
     textDecoration: "none",
     color: "white"
   }
