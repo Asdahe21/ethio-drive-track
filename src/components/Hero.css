@@ -1,0 +1,94 @@
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* VIN Search Row */
+.search-row {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 450px;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.search-row button {
+  background-color: rgb(0, 212, 212);
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.search-row button:hover {
+  background-color: #ffe600;
+}
+
+/* Other styles */
+.no-vin {
+  margin-top: 10px;
+  border: 1px solid #007bff;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.checks {
+  margin-top: 30px;
+}
+
+.report-list {
+  margin-top: 20px;
+}
+
+.report-list ul {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+}
+
+.report-list li {
+  margin-bottom: 5px;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

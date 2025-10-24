@@ -1,0 +1,851 @@
+/* ReportPage.css */
+
+.report-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Light background for the page */
+}
+
+/* --- Navigation Bar (Tabs) --- */
+.report-nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: white;
+    padding-left: 20px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.report-nav button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.report-nav button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    font-weight: bold;
+}
+
+/* --- Main Content Area --- */
+.report-main-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header Section --- */
+.car-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.car-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.car-info h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.vin-tag, .fuel-tag, .year-tag {
+    background: #000;
+    color: white;
+    padding: 3px 8px;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.share-button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.share-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Section Cards Grid --- */
+.section-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Media Query for smaller screens (makes 2 columns) */
+@media (max-width: 992px) {
+    .section-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Media Query for mobile (makes 1 column) */
+@media (max-width: 576px) {
+    .section-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.report-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    min-height: 140px; /* Ensure consistent height */
+}
+
+.report-card h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* --- Status Styling --- */
+.status-tag {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.report-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Colors based on status */
+.status-tag.attention {
+    background-color: #fff3cd; /* Light yellow */
+    color: #856404; /* Dark yellow/brown */
+}
+
+.status-tag.ok {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+}
+
+/* --- Data Sources --- */
+.data-sources {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Photos Section --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.photo-item {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.photo-grid p {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #777;
+}
+
+/* Error and Loading messages */
+.report-container, .error-message {
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+.error-message {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    background-color: #f8d7da;
+    border-radius: 8px;
+}
+
+.show-more-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.show-more-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.show-more-button:hover {
+    background-color: #0056b3;
+}
+/* ReportPage.css - Add these styles for the Navigation Buttons */
+
+.modal-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px; /* Make the arrows visible */
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 1002; /* Above the image */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    user-select: none; /* Prevent text selection */
+}
+
+.modal-nav-button:hover {
+    opacity: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Ensure the modal close button uses the correct symbol */
+.modal-close-button {
+    /* ... existing styles ... */
+    font-size: 30px; /* Adjust font size for the 'x' symbol */
+    line-height: 1;
+}
+.fullscreen-modal-overlay {
+    /* 🔑 KEY 1: Fixes the element to the viewport, ignoring parent elements */
+    position: fixed; 
+    
+    /* 🔑 KEY 2: Covers the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Viewport Width */
+    height: 100vh; /* Viewport Height */
+    
+    /* 🔑 KEY 3: Ensures it's on top of all other elements */
+    z-index: 9999; 
+    
+    /* Styling for the background */
+    background-color: rgba(0, 0, 0, 0.95); /* Slightly darker background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Modal Image (To ensure the image fits within the screen) */
+.fullscreen-modal-content {
+    max-width: 90vw; 
+    max-height: 90vh; 
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* 3. Navigation and Close Buttons (Must be above the image and overlay) */
+.modal-close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000; /* Must be higher than overlay */
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-nav-button {
+    position: fixed; /* Use fixed to ensure they stay relative to the viewport center */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    background: none;
+    /* ... rest of the nav button styles ... */
+}
+.prev-button {
+    left: 10px;
+}
+.next-button {
+    right: 10px;
+}
+
+/* --- Commercial Use Detailed Card Styles --- */
+/* --- FULLSCREEN MODAL STYLES --- */
+
+.fullscreen-modal-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    z-index: 9999; /* High z-index for full overlay */
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-modal-content {
+    max-width: 90vw; 
+    max-height: 90vh; 
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close-button {
+    position: fixed; /* Fixed position relative to viewport */
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background-color 0.2s, transform 0.2s;
+    line-height: 1;
+}
+
+.modal-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg);
+}
+
+.modal-nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 10000;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    user-select: none;
+}
+
+.modal-nav-button:hover {
+    opacity: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Optional: Add pointer cursor to clickable images */
+.car-image, .photo-item {
+    cursor: pointer;
+}
+
+
+/* --- COMMERCIAL USE DETAILED CARD STYLES --- */
+
+.commercial-use-detailed-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px; 
+}
+
+.commercial-use-detailed-card .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.commercial-use-detailed-card .overall-status-banner {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.commercial-use-detailed-card .overall-status-banner.status-ok {
+    background-color: #e6f7e6; 
+    border: 1px solid #99e699;
+    color: #008000;
+}
+
+.commercial-use-detailed-card .overall-status-banner.status-attention {
+    background-color: #fff8e6; 
+    border: 1px solid #ffe599;
+    color: #cc8400;
+}
+
+.commercial-use-detailed-card .overall-status-text {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.commercial-use-detailed-card .intro-text {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.commercial-use-detailed-card .checked-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.commercial-checks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.check-item-card {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.check-item-card .check-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.check-item-card .check-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.check-item-card .check-result {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.check-item-card .result-not-found {
+    color: #008000; 
+    font-weight: 500;
+}
+
+.check-item-card .result-found {
+    color: #cc8400; 
+    font-weight: 500;
+}
+
+.check-item-card .check-detail {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- THEFT DETAILED CARD STYLES --- */
+
+.theft-detailed-card {
+    /* Uses the same background/shadow as commercial card for continuity */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px; 
+}
+
+.theft-detailed-card .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Reusing .overall-status-banner styles from commercial card */
+
+.theft-detailed-card .intro-text {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.theft-detailed-card .note-block {
+    background-color: #f0f8ff; /* Light blue/grey for note */
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.theft-detailed-card .note-block p:first-child {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.theft-detailed-card .checked-header,
+.theft-detailed-card .checked-countries-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.theft-checks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Reusing .check-item-card styles from commercial card (minimal style needed here) */
+.theft-detailed-card .check-item-card {
+    min-height: 120px; /* Ensure cards align well */
+}
+
+.theft-detailed-card .countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding-top: 10px;
+}
+
+.theft-detailed-card .country-tag {
+    /* In a real app, you'd use icons/flags */
+    font-size: 14px;
+    color: #333;
+    /* Optional: Add space for a flag icon if implemented */
+    padding-left: 20px;
+    position: relative;
+}
+
+/* --- MILEAGE DETAILED CARD STYLES --- */
+
+.mileage-detailed-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px; 
+}
+
+.mileage-detailed-card .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Reuses .overall-status-banner styles */
+
+.mileage-detailed-card .intro-text {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.mileage-note-block {
+    background-color: #f0f8ff; /* Light blue/grey for note */
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.mileage-note-block p {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.mileage-details-list {
+    list-style: disc inside;
+    padding-left: 0;
+    margin-top: 10px;
+    color: #444;
+}
+
+.mileage-details-list li {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.insight-block {
+    background-color: #f7f7f7;
+    border-left: 5px solid #ffcc00; /* Yellow border for carVertical insight */
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.insight-block .insight-header {
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 8px;
+}
+
+.insight-block .insight-text {
+    color: #444;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* --- Mileage Chart Placeholder Styles --- */
+.mileage-chart-placeholder {
+    height: 300px; /* Mock chart height */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* To simulate chart from bottom up */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.chart-line-representation {
+    width: 90%;
+    height: 80%;
+    border-left: 1px dashed #aaa;
+    border-bottom: 1px dashed #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #0056b3;
+    font-size: 12px;
+    position: relative;
+}
+
+/* Simplified Data Point Labels */
+.chart-data-point, .rollback-flag {
+    position: absolute;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    background-color: rgba(255, 255, 0, 0.3); /* Yellow highlight area */
+    width: 20%;
+    height: 100%;
+    left: 40%;
+    bottom: 0;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    line-height: 250px;
+}
+
+.rollback-flag {
+    bottom: 50px;
+    left: 65%;
+    background-color: #ffcccc;
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.last-record {
+    bottom: 50px;
+    right: 5%;
+    background: #007bff;
+    color: white;
+}
+
+.typical {
+    bottom: 20px;
+    right: 5%;
+    background: #ccc;
+    color: #333;
+}
+
+.chart-year-labels {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #666;
+}
+/* --- TITLE DETAILED CARD STYLES --- */
+
+.title-detailed-card {
+    /* Reuses primary card styling */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px; 
+}
+
+.title-detailed-card .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Reuses .overall-status-banner styles */
+
+.title-detailed-card .intro-text {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.title-note-block {
+    background-color: #f7f7f7; /* Light grey for note */
+    border-left: 5px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.title-note-block p {
+    color: #444;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.title-detailed-card .checked-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.title-brands-grid {
+    display: grid;
+    /* 3 columns on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+}
+
+.brand-item-card {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Matches the size shown in screenshot */
+    min-height: 120px; 
+}
+
+.brand-item-card .brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.brand-item-card .brand-result {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.brand-item-card .result-not-found-title {
+    color: #008000; /* Green for "No record found" */
+    font-weight: 500;
+}
+
+.brand-item-card .result-found-title {
+    color: #ffcc00; /* Yellow for attention/warning */
+    background-color: #fff8e6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.brand-item-card .brand-detail {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.brands-checked-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.brands-checked-footer .checked-count {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #444;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
